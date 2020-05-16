@@ -6,8 +6,9 @@ def du_qu_shu_ju(text_line):#读取每行数据，将其分为键值对并返回
 	text_line = text_line
 	index_maohao = text_line.index(":")
 	key = text_line[:index_maohao]
-	value = text_line[index_maohao+1:-2]
-	return key,value
+	value = text_line[index_maohao+1:]
+	new_value=str(value.strip())
+	return key,new_value
 
 def huo_qu_lyric(music_id,music_name):#根据歌曲ID和歌曲名，获取并创建相关的歌词软件在相对路径下的lyric文件夹
 	music_id = music_id
